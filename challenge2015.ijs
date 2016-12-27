@@ -5,7 +5,13 @@ NB. =========================================================
 NB. Problem	1 -	Nag A Ram
 NB. =========================================================
 
+NB. My initial (working) attempt - a one liner
 isAnagramOf=:(0:`((*/)@(=&((/:~@tolower)@(' ' & i.#])))))@.(=&(#@:(' ' & i.#])))
+
+NB. A second version with named verbs for the intermediate steps
+stripSpace =: ' ' & i.#]
+comparable =: /:~ @: tolower @: stripSpace
+isAnagramOf1 =: (comparable @: ]) -: (comparable @: [)
 
 NB. =========================================================
 NB. Problem	5 – He's so mean, he has no standard deviation
