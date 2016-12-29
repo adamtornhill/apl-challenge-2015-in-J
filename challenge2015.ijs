@@ -23,8 +23,10 @@ NB. =========================================================
 NB. Problem 8 – Unlucky 13
 NB. =========================================================
 
-NB. Let's solve this in tacit style and experiment with dyadic forks:
+NB. This is quite simple if we want to use a script to introduce a monadic verb:
+makeLucky =: 3 : '12.99 (I. 13=y) } y'
 
+NB. Let's also solve this in tacit style and experiment with dyadic forks:
 indiciesOfThirteen =: I. @: (13 & =)
 replacesThirteenIn =: indiciesOfThirteen @: ] }
 makeLucky =: 12.99 & replacesThirteenIn
