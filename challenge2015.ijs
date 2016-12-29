@@ -25,9 +25,7 @@ NB. =========================================================
 
 NB. Let's solve this in tacit style and experiment with dyadic forks:
 
-13 (i. @: # @: ]) i.20
-
-indiciesIn =: = # (i. @: # @: ])
-thirteenIndiciesIn =: 13 & indiciesIn
-replacesThirteenIn =: thirteenIndiciesIn @: ] }
+indiciesOfThirteen =: I. @: (13 & =)
+replacesThirteenIn =: indiciesOfThirteen @: ] }
 makeLucky =: 12.99 & replacesThirteenIn
+
